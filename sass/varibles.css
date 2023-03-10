@@ -1,0 +1,7 @@
+.row p {
+  color: gray;
+}
+
+.row p b {
+  color: var(--Dark-gray-blue);
+}/*# sourceMappingURL=varibles.css.map */

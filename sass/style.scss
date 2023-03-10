@@ -1,0 +1,148 @@
+@import './varibles.scss';
+
+
+:root {
+    @include ColorsB;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", sans-serif;
+  }
+  body {
+    min-height: 100vh;
+    @include proStyle;
+    background-color: var(--Pale-blue);
+
+    .card {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 2rem;
+        width: 650px;
+        background-color: var(--White);
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+          }
+      }
+  }
+  .result {
+    width: 50%;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    background: linear-gradient(
+      to bottom,
+      var(--Light-slate-blue-background),
+      var(--Light-royal-blue-background)
+    );
+    text-align: center;
+    @include flex;
+    align-items: center;
+    gap: 1rem;
+
+    .title {
+        color: var(--Light-lavender);
+        margin-bottom: 1rem;
+      }
+
+      .circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: linear-gradient(
+          to bottom,
+          var(--Violet-blue-circle),
+          var(--Persian-blue-circle)
+        );
+        @include proStyle;
+        flex-direction: column;
+        
+      }
+  }
+  
+  .circle h1 {
+    color: $bgColor;
+    font-size: 4rem;
+  }
+  .circle p {
+    color: var(--Light-lavender);
+  }
+  .result b {
+    color: $bgColor;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .result .info {
+    color: var(--Light-lavender);
+    width: 200px;
+  }
+  .summary {
+    width: 50%;
+    padding: 1.5rem 2rem;
+    @include flex;
+    gap: 1rem;
+  }
+  .summary .title {
+    color: $black;
+    font-weight: 800;
+  }
+  .rows {
+    @include flex;
+    gap: 0.8rem;
+  }
+  .row {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+
+    .badge {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+  }
+  @include colorChilds;
+  
+  .btn {
+    margin-top: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background: var(--Dark-gray-blue);
+    cursor: pointer;
+    font-size: 1rem;
+    color: $bgColor;
+  }
+  .btn:hover {
+    background: linear-gradient(
+      to bottom,
+      var(--Light-slate-blue-background),
+      var(--Light-royal-blue-background)
+    );
+  }
+
+
+  @media screen and (max-width: 650px) {
+    body {
+      align-items: flex-start;
+      background-color: $bgColor;
+    }
+    .card {
+      box-shadow: none;
+    }
+    .card-container {
+      flex-direction: column;
+    }
+    .result {
+      border-radius: 0 0 1rem 1rem;
+      width: $width;
+    }
+    .result .info {
+      width: 250px;
+    }
+    .summary {
+        width: $width;
+    }
+  }
